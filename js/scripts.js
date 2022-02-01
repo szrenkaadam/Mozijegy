@@ -1,19 +1,18 @@
 function szamolas() {
-    let szam = parseInt(document.getElementById("szam").value)
+    let darab = parseInt(document.getElementById("darab").value)
     let sor = parseInt(document.getElementById("sor").value)
-    let eredmeny = 0 
-
+    let fizetendo = 0
+    let jegyar = 0
 
     if (sor < 16) {
-        eredmeny * 1500
-
-    } else if (sor < 21 ) {
-        eredmeny * 1700
-
-    } else if (sor < 26) {
-        eredmeny * 2000
-
+        jegyar = 1500
+    } else if (sor < 21) {
+        jegyar = 1700
+    } else {
+        jegyar = 2000
     }
 
-    kiiras.innerText = ` Összesen: ${eredmeny} * ${szam} Ft `
+    fizetendo = jegyar * darab
+
+    kiiras.innerText = ` Összesen: ${fizetendo} Ft `
 }
